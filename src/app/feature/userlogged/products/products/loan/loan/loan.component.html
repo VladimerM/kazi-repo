@@ -1,0 +1,42 @@
+<main *ngIf="lang | async as language">
+  <h1 class="header">
+    {{ language == "geo" ? "მიმდინარე სესხები" : "Current loans" }}
+  </h1>
+  <h1 class="wrong" *ngIf="wrongAmount">
+    {{ language == "geo" ? "არასწორი თანხა" : "Wrong amount" }}
+  </h1>
+  <h1 class="wrong" *ngIf="notEnoughAmount">
+    {{
+      language == "geo"
+        ? "არ გაქვთ საკმარისი თანხა ანგარიშზე"
+        : "You don't have enough amount on your account"
+    }}
+  </h1>
+  <div *ngIf="userLoans | async as loans" class="loan-container">
+    <ng-container *ngFor="let loan of loans; let index = index">
+      <div class="loans">
+        <div class="loan">
+          <h1>
+            {{ language == "geo" ? "სამომხმარებლო სესხი" : "Consumer Loans" }}
+            {{ index + 1 }}
+          </h1>
+          <h1>{{ loan.date }}</h1>
+          <h1>{{ loan.amount }} {{ language == "geo" ? "ლარი" : "GEL" }}</h1>
+        </div>
+        <div class="confirm">
+          <input type="number" [formControl]="inputAmount" />
+          <button
+            class="confirm-button"
+            (click)="confirm(index)"
+            [disabled]="inputAmount.invalid"
+            [ngClass]="{
+              'not-allowed': inputAmount.invalid
+            }"
+          >
+            {{ language == "geo" ? "სესხის დაფარვა" : "Close Loan" }}
+          </button>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</main>

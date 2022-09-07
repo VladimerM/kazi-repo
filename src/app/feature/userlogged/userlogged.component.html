@@ -1,0 +1,66 @@
+<main>
+  <header>
+    <div class="header">
+      <img
+        *ngIf="lang | async as language"
+        src="{{
+          language == 'geo'
+            ? 'https://tbconline.ge/tbcrd/assets/img/homepage/Logo-ka.svg'
+            : 'https://tbconline.ge/tbcrd/assets/img/homepage/Logo-en.svg'
+        }}"
+        alt="bg-image"
+        routerLink="/userlogged/mainpage"
+      />
+      <div class="user" *ngIf="loggedUser | async as data">
+        <div class="user-header" routerLink="/userlogged/parameters">
+          <h1>{{ data.name }} {{ data.surname }}</h1>
+          <img
+            class="user-logo"
+            src="../../../assets/main-page/userlogo.png"
+            alt="logo"
+          />
+        </div>
+        <div class="images">
+          <img
+            class="flag"
+            src="https://tbconline.ge/tbcrd/assets/flag-geo.68bac5b5d82e2d65a89bc907d80d020b.svg"
+            alt="geo"
+          />
+          <img
+            (click)="changeLang()"
+            src="{{ changelang | async }}"
+            alt="image"
+          />
+          <img
+            class="flag"
+            src="https://tbconline.ge/tbcrd/assets/flag-gb.2e9c71c7514c4036f0122b1bdc202c17.svg"
+            alt="eng"
+          />
+        </div>
+        <img
+          class="log-out"
+          src="https://tbconline.ge/tbcrd/assets/logout.8cdef2acfe2e24c59d19d0dc6599f0d4.svg"
+          alt="log-out"
+          (click)="logOut()"
+        />
+      </div>
+    </div>
+
+    <div class="navigation">
+      <nav *ngIf="lang | async as language">
+        <li routerLink="/userlogged/mainpage"></li>
+        <li class="text" routerLink="products/account">
+          {{ language == "geo" ? "ჩემი პროდუქტები" : "My Products" }}
+        </li>
+        <li class="text" routerLink="transfers/accountnumber">
+          {{ language == "geo" ? "გადარიცხვები" : "Transfers" }}
+        </li>
+        <li class="text" routerLink="offers/opendeposit">
+          {{ language == "geo" ? "შეთავაზებები" : "Offers" }}
+        </li>
+        <li routerLink="parameters"></li>
+      </nav>
+    </div>
+  </header>
+  <router-outlet></router-outlet>
+</main>

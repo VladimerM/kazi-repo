@@ -1,0 +1,160 @@
+{
+  "users": [
+    {
+      "name": "გიორგი",
+      "surname": "ლეჟავა",
+      "personalNumber": 12326564598,
+      "phoneNumber": 577989869,
+      "username": "lezava",
+      "password": "Lezava123",
+      "id": 1
+    },
+    {
+      "name": "სალომე",
+      "surname": "ფაცაცია",
+      "personalNumber": 54549887845,
+      "phoneNumber": 577489898,
+      "username": "pacia",
+      "password": "Pacia123",
+      "id": 2
+    }
+  ],
+  "accounts": [
+    {
+      "account": "GE00TB1379052388894895",
+      "amount": "16180",
+      "id": 1
+    },
+    {
+      "account": "GE00TB6774351212363410",
+      "amount": "10920",
+      "id": 2
+    }
+  ],
+  "loans": [
+    {
+      "loans": [
+        {
+          "date": "6/8/2022",
+          "amount": 2500
+        },
+        {
+          "date": "6/8/2022",
+          "amount": 2000
+        },
+        {
+          "date": "6/8/2022",
+          "amount": 2500
+        }
+      ],
+      "id": 1
+    },
+    {
+      "loans": [
+        {
+          "date": "6/8/2022",
+          "amount": 2000
+        },
+        {
+          "date": "6/8/2022",
+          "amount": 1700
+        }
+      ],
+      "id": 2
+    }
+  ],
+  "deposits": [
+    {
+      "deposits": [],
+      "id": 1
+    },
+    {
+      "deposits": [
+        {
+          "date": "6/8/2022",
+          "amount": 1500
+        },
+        {
+          "date": "6/8/2022",
+          "amount": 500
+        },
+        {
+          "date": "6/8/2022",
+          "amount": 1200
+        },
+        {
+          "date": "6/8/2022",
+          "amount": 700
+        }
+      ],
+      "id": 2
+    }
+  ],
+  "transactions": [
+    {
+      "transactions": [
+        {
+          "date": "6/8/2022",
+          "receiver": "GE00TB6774351212363410",
+          "transferror": "GE00TB1379052388894895",
+          "amount": 1000
+        },
+        {
+          "date": "6/8/2022",
+          "receiver": "GE00TB6774351212363410",
+          "transferror": "GE00TB1379052388894895",
+          "amount": 150
+        },
+        {
+          "date": "6/8/2022",
+          "receiver": "Open Deposit",
+          "transferror": "GE00TB1379052388894895",
+          "amount": 1500
+        },
+        {
+          "date": "6/8/2022",
+          "receiver": "GE00TB1379052388894895",
+          "transferror": "Take Loan",
+          "amount": 2500
+        },
+        {
+          "date": "6/8/2022",
+          "receiver": "Pay Loan",
+          "transferror": "GE00TB1379052388894895",
+          "amount": 840
+        },
+        {
+          "date": "6/8/2022",
+          "receiver": "GE00TB1379052388894895",
+          "transferror": "Close Deposit",
+          "amount": 1650
+        },
+        {
+          "date": "6/8/2022",
+          "receiver": "GE00TB1379052388894895",
+          "transferror": "Close Deposit",
+          "amount": 1650
+        }
+      ],
+      "id": 1
+    },
+    {
+      "transactions": [
+        {
+          "date": "6/8/2022",
+          "receiver": "GE00TB6774351212363410",
+          "transferror": "GE00TB1379052388894895",
+          "amount": 1000
+        },
+        {
+          "date": "6/8/2022",
+          "receiver": "GE00TB6774351212363410",
+          "transferror": "GE00TB1379052388894895",
+          "amount": 150
+        }
+      ],
+      "id": 2
+    }
+  ],
+  "moneytransfers": []
+}

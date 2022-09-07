@@ -22,7 +22,7 @@ import {
 export class ApiRequestsService {
   constructor(private http: HttpClient) {}
 
-  private baseUrl = 'https://my-frix-project.herokuapp.com/';
+  private baseUrl = 'https://my-frix-project.herokuapp.com';
 
   //Users
 
